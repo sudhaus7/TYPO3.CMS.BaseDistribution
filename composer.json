@@ -40,6 +40,7 @@
 		"typo3/cms-viewpage": "^9.5"
 
 	},
+
 	"require-dev": {
 		"typo3-console/composer-typo3-auto-install": "dev-master",
 		"nimut/testing-framework": "^4.1",
