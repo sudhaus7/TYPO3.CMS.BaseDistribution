@@ -71,6 +71,10 @@
 			"@extensionsetupifpossible",
 			"@addtrustedhostpattern",
 			"@addfilefillconfig"
+		],
+
+		"post-autoload-dump": [
+			"@typo3install"
 		]
 	}
 
