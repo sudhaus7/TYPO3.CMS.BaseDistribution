@@ -40,6 +40,20 @@
 		"typo3/cms-viewpage": "^9.5"
 
 	},
+
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": "public",
+			"root-dir": "private"
+		},
+		"helhum/dotenv-connector": {
+			"env-file": ".env"
+		},
+		"helhum/typo3-console": {
+			"install-extension-dummy": "0"
+		}
+	},
 	"scripts":{
 		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
