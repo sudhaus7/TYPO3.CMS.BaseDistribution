@@ -44,7 +44,7 @@
 		"typo3-console/composer-typo3-auto-install": "dev-master",
 		"nimut/testing-framework": "^4.1",
 		"phpunit/phpunit": "*",
-		"typo3/cms-adminpanel": "~10.0.0",
+		"typo3/cms-adminpanel": "^9.5",
 		"ichhabrecht/filefill": "^3.0",
 		"christianessl/impersonate": "^1.0"
 	},
