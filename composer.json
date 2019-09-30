@@ -45,7 +45,7 @@
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "dev-master",
 		"ichhabrecht/filefill": "^3.0",
-		"christianessl/impersonate": "^1.0",
+		"christianessl/impersonate": "^1.0"
 	},
 	"extra": {
 		"typo3/cms": {
