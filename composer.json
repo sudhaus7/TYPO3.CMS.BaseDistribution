@@ -1,9 +1,11 @@
 {
 	"repositories": [
-		{ "type": "composer", "url": "https://composer.typo3.org/" }
+		{ "type": "path", "url": "packages/*" },
+		{ "type": "composer", "url": "https://composer.typo3.org/" },
+		{ "type": "composer", "url": "https://packages.sudhaus7.de/" }
 	],
-	"name": "typo3/cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"name": "sudhaus7/default-sitepackage",
+	"description" : "Sudhaus7 TYPO3 CMS Base Sitepackage",
 	"license": "GPL-2.0-or-later",
 	"config": {
 		"platform": {
@@ -36,5 +38,40 @@
 		"typo3/cms-t3editor": "dev-master",
 		"typo3/cms-tstemplate": "dev-master",
 		"typo3/cms-viewpage": "dev-master"
+	},
+	"require-dev": {
+		"typo3-console/composer-typo3-auto-install": "dev-master",
+		"nimut/testing-framework": "^4.1",
+		"phpunit/phpunit": "*",
+		"typo3/cms-adminpanel": "dev-master",
+		"ichhabrecht/filefill": "^3.0",
+		"christianessl/impersonate": "^1.0",
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": "public",
+			"root-dir": "private"
+		},
+		"helhum/dotenv-connector": {
+			"env-file": ".env"
+		},
+		"helhum/typo3-console": {
+			"install-extension-dummy": "0"
+		}
+	},
+	"scripts": {
+		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
+		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
+		"killcache": "@php vendor/bin/typo3cms cache:flush",
+		"generatepackagestates": "@php vendor/bin/typo3cms install:generatepackagestates",
+		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
+		"typo3install": [
+			"@generatepackagestates",
+			"@extensionsetupifpossible",
+			"@addtrustedhostpattern",
+			"@addfilefillconfig"
+		]
 	}
+
 }
