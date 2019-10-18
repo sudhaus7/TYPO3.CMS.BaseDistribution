@@ -9,7 +9,7 @@ Get going quickly with TYPO3 CMS.
 
 ## Quickstart
 
-* `composer create-project typo3/cms-base-distribution project-name ^9`
+* `composer create-project sudhaus7/default-sitepackage project-name ^9`
 * `cd project-name`
 
 **Setup:**
