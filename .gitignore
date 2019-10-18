@@ -8,3 +8,5 @@ nbproject
 /public/typo3conf/*
 !/public/typo3conf/LocalConfiguration.php
 !/public/typo3conf/AdditionalConfiguration.php
+!/private/typo3conf/LocalConfiguration.php
+!/private/typo3conf/AdditionalConfiguration.php
