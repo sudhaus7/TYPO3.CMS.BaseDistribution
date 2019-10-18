@@ -4,10 +4,9 @@ nbproject
 /var
 /vendor
 /public/*
-!/public/.htaccess
-!/public/typo3conf
+/private/*
+/htdocs/*
 /public/typo3conf/*
-!/public/typo3conf/LocalConfiguration.php
-!/public/typo3conf/AdditionalConfiguration.php
+/private/typo3conf/*
 !/private/typo3conf/LocalConfiguration.php
 !/private/typo3conf/AdditionalConfiguration.php
