@@ -48,8 +48,7 @@
 		"nimut/testing-framework": "^4.1",
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "~10.2.0",
-		"ichhabrecht/filefill": "^3.0",
-		"christianessl/impersonate": "^1.0"
+		"ichhabrecht/filefill": "^3.0"
 	},
 	"extra": {
 		"typo3/cms": {
@@ -59,9 +58,6 @@
 		},
 		"helhum/dotenv-connector": {
 			"env-file": ".env"
-		},
-		"helhum/typo3-console": {
-			"install-extension-dummy": "0"
 		}
 	},
 	"scripts": {
@@ -70,15 +66,7 @@
 		"killcache": "@php vendor/bin/typo3cms cache:flush",
 		"generatepackagestates": "@php vendor/bin/typo3cms install:generatepackagestates",
 		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
-		"typo3install": [
-			"@generatepackagestates",
-			"@extensionsetupifpossible",
-			"@addtrustedhostpattern",
-			"@addfilefillconfig"
-		],
 
-		"post-autoload-dump": [
-			"@typo3install"
-		]
+
 	}
 }
