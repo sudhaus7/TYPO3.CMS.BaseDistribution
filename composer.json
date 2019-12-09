@@ -47,8 +47,7 @@
 		"typo3-console/composer-typo3-auto-install": "dev-master",
 		"nimut/testing-framework": "^4.1",
 		"phpunit/phpunit": "*",
-		"typo3/cms-adminpanel": "~10.2.0",
-		"ichhabrecht/filefill": "^3.0"
+		"typo3/cms-adminpanel": "~10.2.0"
 	},
 	"extra": {
 		"typo3/cms": {
@@ -59,14 +58,5 @@
 		"helhum/dotenv-connector": {
 			"env-file": ".env"
 		}
-	},
-	"scripts": {
-		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
-		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
-		"killcache": "@php vendor/bin/typo3cms cache:flush",
-		"generatepackagestates": "@php vendor/bin/typo3cms install:generatepackagestates",
-		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible"
-
-
 	}
 }
