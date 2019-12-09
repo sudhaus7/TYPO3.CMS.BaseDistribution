@@ -44,9 +44,7 @@
 
 
 	"require-dev": {
-		"nimut/testing-framework": "^4.1",
-		"phpunit/phpunit": "*",
-		"typo3/cms-adminpanel": "~10.2.0"
+		"phpunit/phpunit": "*"
 	},
 	"extra": {
 		"typo3/cms": {
