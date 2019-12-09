@@ -65,7 +65,7 @@
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
 		"killcache": "@php vendor/bin/typo3cms cache:flush",
 		"generatepackagestates": "@php vendor/bin/typo3cms install:generatepackagestates",
-		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
+		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible"
 
 
 	}
