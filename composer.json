@@ -1,5 +1,7 @@
 {
 	"repositories": [
+		{ "type": "vcs", "url": "https://github.com/mschwemer/typo3-secure-web" },
+		{ "type": "vcs", "url": "https://github.com/mschwemer/typo3-composer-setup" },
 		{ "type": "path", "url": "packages/*" },
 		{ "type": "composer", "url": "https://composer.typo3.org/" },
 		{ "type": "composer", "url": "https://packages.sudhaus7.de/" }
@@ -14,6 +16,8 @@
 	},
 
 	"require": {
+		"helhum/typo3-composer-setup": "dev-compat-v10",
+		"helhum/typo3-secure-web": "dev-compat-v10",
 		"typo3/cms-backend": "~10.2.0",
 		"typo3/cms-core": "~10.2.0",
 		"typo3/cms-extbase": "~10.2.0",
