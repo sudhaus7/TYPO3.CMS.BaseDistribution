@@ -44,7 +44,6 @@
 
 
 	"require-dev": {
-		"typo3-console/composer-typo3-auto-install": "dev-master",
 		"nimut/testing-framework": "^4.1",
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "~10.2.0"
