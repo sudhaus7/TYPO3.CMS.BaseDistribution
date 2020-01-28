@@ -56,7 +56,7 @@
 		"generatepackagestates": "@php vendor/bin/typo3cms install:generatepackagestates",
 		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
 		"typo3-cms-scripts": [
-			"@php vendor/bin/typo3cms typo3cms install:fixfolderstructure"
+			"@php vendor/bin/typo3cms install:fixfolderstructure"
 		],
 		"typo3install": [
 			"@generatepackagestates",
