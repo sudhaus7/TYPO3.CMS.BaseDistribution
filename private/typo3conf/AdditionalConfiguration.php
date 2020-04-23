@@ -1,12 +1,14 @@
 <?php
 
 
-$currentApplicationContext = \TYPO3\CMS\Core\Core\Environment::getContext();
+use TYPO3\CMS\Core\Core\Environment;
+
+$currentApplicationContext = Environment::getContext();
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] .= ' (' . (string)$currentApplicationContext . ')';
 
-if (!$currentApplicationContext->isProduction()) {
-    $contextConfigFile = dirname(\TYPO3\CMS\Core\Core\Environment::getPublicPath()) . '/Configuration/' . (string)$currentApplicationContext . '.php';
-    if (file_exists($contextConfigFile)) {
-        require($contextConfigFile);
-    }
+
+$contextConfigFile = dirname(Environment::getPublicPath()) . '/Configuration/' . (string)$currentApplicationContext . '.php';
+if (file_exists($contextConfigFile)) {
+    require($contextConfigFile);
 }
+
