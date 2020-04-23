@@ -42,12 +42,15 @@
 		"typo3/cms-sys-note": "~10.4.0",
 		"typo3/cms-t3editor": "~10.4.0",
 		"typo3/cms-tstemplate": "~10.4.0",
-		"typo3/cms-viewpage": "~10.4.0"
+		"typo3/cms-viewpage": "~10.4.0",
+		"helhum/typo3-console": "~6.0"
 	},
 
 
 	"require-dev": {
-		"phpunit/phpunit": "*"
+		"phpunit/phpunit": "*",
+		"typo3/cms-adminpanel": "^10.4",
+		"ichhabrecht/filefill": "^3.2"
 	},
 	"extra": {
 		"typo3/cms": {
