@@ -16,6 +16,9 @@
 	},
 
 	"require": {
+		"ext-json": "*",
+		"ext-pdo": "*",
+		"php": "7.2.* || 7.3.* || 7.4.*",
 		"helhum/typo3-composer-setup": "dev-compat-v10",
 		"helhum/typo3-secure-web": "dev-compat-v10",
 		"typo3/cms-backend": "~10.4.0",
@@ -45,8 +48,6 @@
 		"typo3/cms-viewpage": "~10.4.0",
 		"helhum/typo3-console": "~6.0"
 	},
-
-
 	"require-dev": {
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "^10.4",
@@ -75,9 +76,12 @@
 			"@addtrustedhostpattern",
 			"@addfilefillconfig"
 		],
+		"guidedinstall" : "@php vendor/bin/typo3cms ",
 		"post-autoload-dump": [
-			"@typo3-cms-scripts",
-			"@typo3install"
+		],
+		"post-install-cmd": [
+			"@generatepackagestates",
+			"echo 'If this is an initial install either execute composer guidedinstall or import a typo3 database and execute composer typo3install'"
 		]
 	}
 }
