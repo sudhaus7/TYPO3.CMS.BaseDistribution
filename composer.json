@@ -76,12 +76,13 @@
 			"@addtrustedhostpattern",
 			"@addfilefillconfig"
 		],
-		"guidedinstall" : "@php vendor/bin/typo3cms ",
+		"guidedinstall" : "@php vendor/bin/typo3cms install:setup",
 		"post-autoload-dump": [
+			"@killcache"
 		],
 		"post-install-cmd": [
 			"@generatepackagestates",
-			"echo 'If this is an initial install either execute composer guidedinstall or import a typo3 database and execute composer typo3install'"
+			"echo -e 'If this is an initial install either execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'"
 		]
 	}
 }
