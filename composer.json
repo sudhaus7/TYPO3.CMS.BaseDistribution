@@ -42,7 +42,7 @@
 	},
 
 	"require-dev": {
-		"typo3-console/composer-typo3-auto-install": "dev-master",
+		"typo3-console/composer-typo3-auto-install": "^0.3",
 		"nimut/testing-framework": "^4.1",
 		"phpunit/phpunit": "*",
 		"ichhabrecht/filefill": "^3.0",
