@@ -47,7 +47,7 @@
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "^9.5",
 		"typo3/cms-lowlevel": "^9.5",
-		"ichhabrecht/filefill",: "^3.0",
+		"ichhabrecht/filefill": "^3.0",
 		"christianessl/impersonate": "^1.0"
 	},
 	"extra": {
