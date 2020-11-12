@@ -1,56 +1,59 @@
 {
+	"name": "sudhaus7/default-sitepackage",
+	"description" : "Sudhaus7 TYPO3 CMS Base Sitepackage",
+	"license": "GPL-2.0-or-later",
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"platform": {
+			"php": "7.2"
+		}
+	},
 	"repositories": [
 		{ "type": "path", "url": "packages/*" },
 		{ "type": "composer", "url": "https://composer.typo3.org/" },
 		{ "type": "composer", "url": "https://packages.sudhaus7.de/" }
 	],
-	"name": "sudhaus7/default-sitepackage",
-	"description" : "Sudhaus7 TYPO3 CMS Base Sitepackage",
-	"license": "GPL-2.0-or-later",
-	"config": {
-		"platform": {
-			"php": "7.2"
-		}
-	},
 
 	"require": {
 		"ext-json": "*",
 		"ext-pdo": "*",
 		"php": "7.2.* || 7.3.* || 7.4.*",
-		"helhum/typo3-composer-setup": "0.5.*",
+		"helhum/typo3-console": "6.*",
+		"helhum/typo3-composer-setup": "*",
 		"helhum/typo3-secure-web": "0.2.*",
-		"typo3/cms-backend": "~10.4.0",
-		"typo3/cms-core": "~10.4.0",
-		"typo3/cms-extbase": "~10.4.0",
-		"typo3/cms-extensionmanager": "~10.4.0",
-		"typo3/cms-filelist": "~10.4.0",
-		"typo3/cms-fluid": "~10.4.0",
-		"typo3/cms-frontend": "~10.4.0",
-		"typo3/cms-install": "~10.4.0",
-		"typo3/cms-recordlist": "~10.4.0",
-
-		"typo3/cms-about": "~10.4.0",
-		"typo3/cms-belog": "~10.4.0",
-		"typo3/cms-beuser": "~10.4.0",
-		"typo3/cms-felogin": "~10.4.0",
-		"typo3/cms-fluid-styled-content": "~10.4.0",
-		"typo3/cms-form": "~10.4.0",
-		"typo3/cms-impexp": "~10.4.0",
-		"typo3/cms-info": "~10.4.0",
-		"typo3/cms-rte-ckeditor": "~10.4.0",
-		"typo3/cms-setup": "~10.4.0",
-		"typo3/cms-seo": "~10.4.0",
-		"typo3/cms-sys-note": "~10.4.0",
-		"typo3/cms-t3editor": "~10.4.0",
-		"typo3/cms-tstemplate": "~10.4.0",
-		"typo3/cms-viewpage": "~10.4.0",
-		"helhum/typo3-console": "~6.0"
+		"typo3/cms-backend": "^10.4.9",
+		"typo3/cms-core": "^10.4.9",
+		"typo3/cms-extbase": "^10.4.9",
+		"typo3/cms-extensionmanager": "^10.4.9",
+		"typo3/cms-filelist": "^10.4.9",
+		"typo3/cms-fluid": "^10.4.9",
+		"typo3/cms-frontend": "^10.4.9",
+		"typo3/cms-install": "^10.4.9",
+		"typo3/cms-recordlist": "^10.4.9",
+		"typo3/cms-about": "^10.4.9",
+		"typo3/cms-belog": "^10.4.9",
+		"typo3/cms-beuser": "^10.4.9",
+		"typo3/cms-felogin": "^10.4.9",
+		"typo3/cms-fluid-styled-content": "^10.4.9",
+		"typo3/cms-form": "^10.4.9",
+		"typo3/cms-impexp": "^10.4.9",
+		"typo3/cms-info": "^10.4.9",
+		"typo3/cms-rte-ckeditor": "^10.4.9",
+		"typo3/cms-setup": "^10.4.9",
+		"typo3/cms-seo": "^10.4.9",
+		"typo3/cms-sys-note": "^10.4.9",
+		"typo3/cms-t3editor": "^10.4.9",
+		"typo3/cms-tstemplate": "^10.4.9",
+		"typo3/cms-viewpage": "^10.4.9",
+		"typo3/cms-composer-installers": "^3.0",
+		"typo3-console/composer-auto-commands": "^0.4"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "*",
 		"ichhabrecht/filefill": "^3.2",
-		"typo3/cms-adminpanel": "^10.4",
-		"typo3/cms-lowlevel": "~10.4.0"
+		"typo3/cms-adminpanel": "^10.4.9",
+		"typo3/cms-lowlevel": "^10.4.9"
 	},
 	"extra": {
 		"typo3/cms": {
