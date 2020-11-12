@@ -1,4 +1,11 @@
 {
+	"config": {
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"platform": {
+			"php": "7.2"
+		}
+	},
 	"repositories": [
 		{ "type": "path", "url": "packages/*" },
 		{ "type": "composer", "url": "https://composer.typo3.org/" },
@@ -7,16 +14,13 @@
 	"name": "sudhaus7/default-sitepackage",
 	"description" : "Sudhaus7 TYPO3 CMS Base Sitepackage",
 	"license": "GPL-2.0-or-later",
-	"config": {
-		"platform": {
-			"php": "7.2"
-		}
-	},
+
 	"require": {
 		"ext-json": "*",
 		"ext-pdo": "*",
 		"php": "7.2.* || 7.3.* || 7.4.*",
-		"helhum/typo3-composer-setup": "0.5.*",
+		"typo3/cms-composer-installers": "^3.0",
+		"typo3-console/composer-auto-commands": "^0.4",
 		"helhum/typo3-secure-web": "0.2.*",
 		"helhum/typo3-console": "~6.0",
 		"typo3/cms-backend": "dev-master",
@@ -49,6 +53,7 @@
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "dev-master",
 		"typo3/cms-lowlevel": "dev-master",
+		"helhum/typo3-composer-setup": "*",
 		"ichhabrecht/filefill": "^3.0",
 		"christianessl/impersonate": "^1.0"
 	},
