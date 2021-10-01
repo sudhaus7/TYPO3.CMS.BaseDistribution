@@ -3,12 +3,11 @@
 		"optimize-autoloader": true,
 		"sort-packages": true,
 		"platform": {
-			"php": "7.2"
+			"php": "7.4.1"
 		}
 	},
 	"repositories": [
 		{ "type": "path", "url": "packages/*" },
-		{ "type": "composer", "url": "https://composer.typo3.org/" },
 		{ "type": "composer", "url": "https://packages.sudhaus7.de/" }
 	],
 	"name": "sudhaus7/default-sitepackage",
@@ -17,45 +16,44 @@
 
 	"require": {
 		"ext-json": "*",
+		"ext-yaml": "*",
 		"ext-pdo": "*",
-		"php": "7.2.* || 7.3.* || 7.4.*",
-		"typo3/cms-composer-installers": "^3.0",
-		"typo3-console/composer-auto-commands": "^0.4",
-		"helhum/typo3-secure-web": "0.2.*",
-		"helhum/typo3-console": "~6.0",
-		"typo3/cms-backend": "dev-master",
-		"typo3/cms-core": "dev-master",
-		"typo3/cms-extbase": "dev-master",
-		"typo3/cms-extensionmanager": "dev-master",
-		"typo3/cms-filelist": "dev-master",
-		"typo3/cms-fluid": "dev-master",
-		"typo3/cms-frontend": "dev-master",
-		"typo3/cms-install": "dev-master",
-		"typo3/cms-recordlist": "dev-master",
+		"php": "7.4.* || 8.0.*",
+		"typo3/cms-composer-installers": "3.*",
+		"typo3-console/composer-auto-commands": "0.5.*",
+		"helhum/typo3-secure-web": "0.3.*",
+		"helhum/typo3-console": "7.*",
+		"typo3/cms-backend": "11.4.*",
+		"typo3/cms-core": "11.4.*",
+		"typo3/cms-extbase": "11.4.*",
+		"typo3/cms-extensionmanager": "11.4.*",
+		"typo3/cms-filelist": "11.4.*",
+		"typo3/cms-fluid": "11.4.*",
+		"typo3/cms-frontend": "11.4.*",
+		"typo3/cms-install": "11.4.*",
+		"typo3/cms-recordlist": "11.4.*",
 
-		"typo3/cms-about": "dev-master",
-		"typo3/cms-belog": "dev-master",
-		"typo3/cms-beuser": "dev-master",
-		"typo3/cms-felogin": "dev-master",
-		"typo3/cms-fluid-styled-content": "dev-master",
-		"typo3/cms-form": "dev-master",
-		"typo3/cms-impexp": "dev-master",
-		"typo3/cms-info": "dev-master",
-		"typo3/cms-rte-ckeditor": "dev-master",
-		"typo3/cms-setup": "dev-master",
-		"typo3/cms-seo": "dev-master",
-		"typo3/cms-sys-note": "dev-master",
-		"typo3/cms-t3editor": "dev-master",
-		"typo3/cms-tstemplate": "dev-master",
-		"typo3/cms-viewpage": "dev-master"
+		"typo3/cms-about": "11.4.*",
+		"typo3/cms-belog": "11.4.*",
+		"typo3/cms-beuser": "11.4.*",
+		"typo3/cms-felogin": "11.4.*",
+		"typo3/cms-fluid-styled-content": "11.4.*",
+		"typo3/cms-form": "11.4.*",
+		"typo3/cms-impexp": "11.4.*",
+		"typo3/cms-info": "11.4.*",
+		"typo3/cms-rte-ckeditor": "11.4.*",
+		"typo3/cms-setup": "11.4.*",
+		"typo3/cms-seo": "11.4.*",
+		"typo3/cms-sys-note": "11.4.*",
+		"typo3/cms-t3editor": "11.4.*",
+		"typo3/cms-tstemplate": "11.4.*",
+		"typo3/cms-viewpage": "11.4.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "*",
-		"typo3/cms-adminpanel": "dev-master",
-		"typo3/cms-lowlevel": "dev-master",
-		"helhum/typo3-composer-setup": "*",
-		"ichhabrecht/filefill": "^3.0",
-		"christianessl/impersonate": "^1.0"
+		"nimut/testing-framework": "*",
+		"typo3/cms-adminpanel": "11.4.*",
+		"typo3/cms-lowlevel": "11.4.*"
 	},
 	"extra": {
 		"typo3/cms": {
@@ -74,10 +72,8 @@
 		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
 		"killcache": "@php vendor/bin/typo3cms cache:flush",
-		"generatepackagestates": "@php vendor/bin/typo3cms install:generatepackagestates",
 		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
 		"typo3install": [
-			"@generatepackagestates",
 			"@extensionsetupifpossible",
 			"@addtrustedhostpattern",
 			"@addfilefillconfig"
