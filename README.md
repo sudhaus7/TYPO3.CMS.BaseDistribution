@@ -4,12 +4,12 @@ Get going quickly with TYPO3 CMS.
 
 ## Prerequisites
 
-* PHP 7.2
+* PHP 7.4 (for installation) || 8.0 
 * [Composer](https://getcomposer.org/download/)
 
 ## Quickstart
 
-* `composer create-project sudhaus7/default-sitepackage project-name ^10`
+* `composer create-project sudhaus7/default-sitepackage project-name ^11`
 * `cd project-name`
 
 **Setup:**
