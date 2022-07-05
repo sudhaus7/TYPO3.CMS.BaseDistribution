@@ -94,7 +94,11 @@
 		"post-autoload-dump": [
 			"@killcache"
 		],
+		"post-update-cmd": [
+			"git config --local include.path ../.gitconfig 2> /dev/null || echo 'no git yet'"
+		],
 		"post-install-cmd": [
+			"git config --local include.path ../.gitconfig 2> /dev/null || echo 'no git yet'",
 			"@generatepackagestates",
 			"echo -e 'If this is an initial install either execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'"
 		],
