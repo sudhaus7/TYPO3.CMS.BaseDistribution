@@ -81,7 +81,7 @@
 		],
 		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
-		"killcache": "@php vendor/bin/typo3 cache:flush",
+		"killcache": "@php vendor/bin/typo3 cache:flush || echo 0",
 		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
 		"typo3install": [
 			"@extensionsetupifpossible",
