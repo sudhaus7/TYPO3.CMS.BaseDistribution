@@ -7,6 +7,10 @@
 		"sort-packages": true,
 		"platform": {
 			"php": "7.2"
+		},
+		"allow-plugins": {
+			"typo3/cms-composer-installers": true,
+			"typo3/class-alias-loader": true
 		}
 	},
 	"repositories": [
@@ -50,10 +54,11 @@
 		"typo3-console/composer-auto-commands": "^0.4"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "*",
 		"ichhabrecht/filefill": "^3.2",
+		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "^10.4.9",
-		"typo3/cms-lowlevel": "^10.4.9"
+		"typo3/cms-lowlevel": "^10.4.9",
+		"typo3/coding-standards": "^0.5.3"
 	},
 	"extra": {
 		"typo3/cms": {
@@ -66,6 +71,13 @@
 		}
 	},
 	"scripts":{
+		"pre-install-cmd": [
+			"@add-local-git-config"
+		],
+		"pre-update-cmd": [
+			"@add-local-git-config"
+		],
+		"add-local-git-config": "git config --local include.path ../.gitconfig",
 		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
 		"killcache": "@php vendor/bin/typo3cms cache:flush",
@@ -85,6 +97,7 @@
 		"post-install-cmd": [
 			"@generatepackagestates",
 			"echo -e 'If this is an initial install either execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'"
-		]
+		],
+		"csfixer": "@php vendor/bin/php-cs-fixer fix"
 	}
 }
