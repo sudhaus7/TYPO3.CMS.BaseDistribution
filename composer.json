@@ -77,11 +77,13 @@
 		"add-local-git-config": [
 			"git init --initial-branch=main",
 			"git add .",
-			"git config --local include.path ../.gitconfig"
+			"git config --local include.path ../.gitconfig",
+			"echo -e 'GIT is set up, do not forget to add your origin (the gitlab url for this project) with git origin add git@git.b-factor.de:customer/project or something similar'",
+			"echo -e 'You can now execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'"
 		],
 		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
-		"killcache": "@php vendor/bin/typo3 cache:flush || echo 0",
+		"killcache": "@php vendor/bin/typo3 cache:flush 2> /dev/null || echo -e 'not yet set up'",
 		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
 		"typo3install": [
 			"@extensionsetupifpossible",
