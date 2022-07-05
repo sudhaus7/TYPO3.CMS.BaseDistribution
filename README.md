@@ -4,13 +4,21 @@ Get going quickly with TYPO3 CMS.
 
 ## Prerequisites
 
-* PHP 7.4 (for installation) || 8.0 
+* PHP 7.4 (for installation) || 8.0
 * [Composer](https://getcomposer.org/download/)
+* [GIT](https://git-scm.com/)
 
 ## Quickstart
 
 * `composer create-project sudhaus7/default-sitepackage project-name ^11`
 * `cd project-name`
+
+# Changes (10 and 11)
+- The typo3/coding-standards is now installed and used
+- a default .php-cs-fixer.php config has been added with a Sudhaus7/B-Factor/12bis3/code711 specific header. If you are not working for Sudhaus7/B-Factor/12bis3/code711 you might want to change that header, otherwise it will be applied to all your files in packages
+- in .githooks a pre-commit hook has been added which will parse to-be-commited php files with the php-cs-fixer
+- a .gitconfig has been added to configure the local .githooks folder
+- On `composer create-project` git-init will be executed (default branch main) and this .gitconfig will be added to the config.
 
 **Setup:**
 
