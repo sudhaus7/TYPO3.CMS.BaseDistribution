@@ -4,7 +4,7 @@ Get going quickly with TYPO3 CMS.
 
 ## Prerequisites
 
-* PHP 7.4 (for installation) || 8.0
+* PHP 7.4 (for installation) || 8.0 || 8.1
 * [Composer](https://getcomposer.org/download/)
 * [GIT](https://git-scm.com/)
 
