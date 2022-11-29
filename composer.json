@@ -75,7 +75,7 @@
 	"scripts":{
 		"post-create-project-cmd": "@add-local-git-config",
 		"add-local-git-config": [
-			"git init --initial-branch=main",
+			"git init",
 			"git add .",
 			"git config --local include.path ../.gitconfig",
 			"echo -e 'GIT is set up, do not forget to add your origin (the gitlab url for this project) with git origin add git@git.b-factor.de:customer/project or something similar'",
