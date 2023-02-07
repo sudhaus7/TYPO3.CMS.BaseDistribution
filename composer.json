@@ -1,5 +1,4 @@
 {
-	"minimum-stability": "alpha",
 	"config": {
 
 		"optimize-autoloader": true,
@@ -20,13 +19,18 @@
 	"description" : "Sudhaus7 TYPO3 CMS Base Sitepackage",
 	"license": "GPL-2.0-or-later",
 
+
+	"future": {
+		"nimut/testing-framework": "*",
+
+		"helhum/typo3-console": "7.1.x-dev"
+	},
 	"require": {
 		"ext-json": "*",
 		"ext-yaml": "*",
 		"ext-pdo": "*",
 		"php": "8.0.* || 8.1.* || 8.2.*",
-		"typo3/cms-composer-installers": "4.*",
-		"helhum/typo3-console": "7.*",
+		"typo3/cms-composer-installers": "5.*",
 		"typo3/cms-backend": "12.2.*",
 		"typo3/cms-core": "12.2.*",
 		"typo3/cms-extbase": "12.2.*",
@@ -53,7 +57,6 @@
 		"typo3/cms-viewpage": "12.2.*"
 	},
 	"require-dev": {
-		"nimut/testing-framework": "*",
 		"phpunit/phpunit": "*",
 		"typo3/cms-adminpanel": "12.2.*",
 		"typo3/cms-lowlevel": "12.2.*",
@@ -63,7 +66,6 @@
 		"typo3/cms": {
 			"cms-package-dir": "{$vendor-dir}/typo3/cms",
 			"web-dir": "public",
-			"root-dir": "private"
 		},
 		"helhum/dotenv-connector": {
 			"env-file": ".env"
