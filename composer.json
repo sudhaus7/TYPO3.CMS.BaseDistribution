@@ -30,6 +30,7 @@
 		"ext-yaml": "*",
 		"ext-pdo": "*",
 		"php": "8.0.* || 8.1.* || 8.2.*",
+		"helhum/typo3-console": "^8.0.0",
 		"typo3/cms-composer-installers": "5.*",
 		"typo3/cms-backend": "12.3.*",
 		"typo3/cms-core": "12.3.*",
@@ -69,34 +70,28 @@
 		},
 		"helhum/dotenv-connector": {
 			"env-file": ".env"
-		},
-		"helhum/typo3-console": {
-			"install-extension-dummy": "0"
 		}
 	},
 	"scripts":{
-		"post-create-project-cmd": "@add-local-git-config",
-		"add-local-git-config": [
-			"./init.sh"
-		],
-		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
-		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
+		"post-create-project-cmd": "init.sh",
+		"addtrustedhostpattern": "@php vendor/bin/typo3 configuration:set SYS/trustedHostsPattern '.*'",
+		"addfilefillconfig": "@php vendor/bin/typo3 configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
 		"killcache": "@php vendor/bin/typo3 cache:flush 2> /dev/null || echo -e 'not yet set up'",
-		"extensionsetupifpossible": "@php vendor/bin/typo3cms install:extensionsetupifpossible",
+		"databaseupdate": "@php vendor/bin/typo3 database:updateschema",
+		"extensionsetupifpossible": "@php vendor/bin/typo3 install:extensionsetupifpossible ",
 		"typo3install": [
+			"@databaseupdate",
 			"@extensionsetupifpossible",
 			"@addtrustedhostpattern",
 			"@addfilefillconfig"
 		],
-		"guidedinstall" : "@php vendor/bin/typo3cms install:setup",
+		"guidedinstall" : "@php vendor/bin/typo3 setup",
 		"post-autoload-dump": [
 			"@killcache"
 		],
 		"post-update-cmd": [
-			"git config --local include.path ../.gitconfig > /dev/null 2>&1"
 		],
 		"post-install-cmd": [
-			"git config --local include.path ../.gitconfig > /dev/null 2>&1"
 		],
 		"csfixer": "@php vendor/bin/php-cs-fixer fix"
 	}
