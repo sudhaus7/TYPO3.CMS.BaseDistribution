@@ -12,7 +12,8 @@ then
     echo
     echo 'You can now execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'
 fi
-if [[ -x $GIT ]];
+if [[ -x $GIT ]] && [[ -d .git ]];
 then
     $GIT config --local include.path ../.gitconfig
 fi
+rm init.sh

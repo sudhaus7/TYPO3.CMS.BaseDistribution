@@ -10,9 +10,12 @@ Get going quickly with TYPO3 CMS.
 
 ## Quickstart
 
-* `composer create-project sudhaus7/default-sitepackage project-name ^11`
+* `composer create-project sudhaus7/default-sitepackage project-name ^12`
 * `cd project-name`
 
+# Changes (12)
+- init.sh script has been added to manage git init stuff.
+- updates on the entry point for some composer commands
 # Changes (10 and 11)
 - The typo3/coding-standards is now installed and used
 - a default .php-cs-fixer.php config has been added with a Sudhaus7/B-Factor/12bis3/code711 specific header. If you are not working for Sudhaus7/B-Factor/12bis3/code711 you might want to change that header, otherwise it will be applied to all your files in packages
