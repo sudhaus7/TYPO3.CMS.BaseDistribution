@@ -77,11 +77,7 @@
 	"scripts":{
 		"post-create-project-cmd": "@add-local-git-config",
 		"add-local-git-config": [
-			"git init",
-			"git add .",
-			"git config --local include.path ../.gitconfig",
-			"echo -e 'GIT is set up, do not forget to add your origin (the gitlab url for this project) with git origin add git@git.b-factor.de:customer/project or something similar'",
-			"echo -e 'You can now execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'"
+			"./init.sh"
 		],
 		"addtrustedhostpattern": "@php vendor/bin/typo3cms configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3cms configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
@@ -97,11 +93,10 @@
 			"@killcache"
 		],
 		"post-update-cmd": [
-			"git config --local include.path ../.gitconfig 2> /dev/null || echo 'no git yet'"
+			"git config --local include.path ../.gitconfig > /dev/null 2>&1"
 		],
 		"post-install-cmd": [
-			"git config --local include.path ../.gitconfig 2> /dev/null || echo 'no git yet'",
-			"echo -e 'If this is an initial install either execute `composer guidedinstall` or import a typo3 database and execute `composer typo3install`'"
+			"git config --local include.path ../.gitconfig > /dev/null 2>&1"
 		],
 		"csfixer": "@php vendor/bin/php-cs-fixer fix"
 	}
