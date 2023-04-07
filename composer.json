@@ -19,12 +19,6 @@
 	"description" : "Sudhaus7 TYPO3 CMS Base Sitepackage",
 	"license": "GPL-2.0-or-later",
 
-
-	"future": {
-		"nimut/testing-framework": "*",
-
-		"helhum/typo3-console": "7.1.x-dev"
-	},
 	"require": {
 		"ext-json": "*",
 		"ext-yaml": "*",
