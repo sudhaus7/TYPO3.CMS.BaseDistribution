@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "./init.sh" >> .gitignore
 GIT=`which git`
 if [[ -x $GIT ]] && [[ ! -d .git ]];
 then
