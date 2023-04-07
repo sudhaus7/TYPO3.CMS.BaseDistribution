@@ -73,7 +73,7 @@
 		}
 	},
 	"scripts":{
-		"post-create-project-cmd": "init.sh",
+		"post-create-project-cmd": "./init.sh",
 		"addtrustedhostpattern": "@php vendor/bin/typo3 configuration:set SYS/trustedHostsPattern '.*'",
 		"addfilefillconfig": "@php vendor/bin/typo3 configuration:set EXTCONF/filefill/storages/1 '[{\"identifier\":\"sys_domain\"},{\"identifier\":\"placeholder\"}]' --json",
 		"killcache": "@php vendor/bin/typo3 cache:flush 2> /dev/null || echo -e 'not yet set up'",
